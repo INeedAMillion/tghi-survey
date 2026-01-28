@@ -22,16 +22,17 @@ total_score += score_map[q1[0]]
 
 q2 = st.radio("Are wigs, weaves, or braids your 'crutch' right now to hide damage or thinning?",
               ["a) Not at all—I mostly rock my natural hair.",
-               "b) Sometimes, but just for a switch-up. Not to hide anything.",
                "c) Often. I use them to cover up thinning areas or breakage.",
+               "b) Sometimes, but just for a switch-up. Not to hide anything.",
                "d) Every day. I don’t feel comfortable showing my natural hair due to loss."])
 total_score += score_map[q2[0]]
 
 q3 = st.radio("How often are you using heat, colour, or chemicals (relaxers, bleach, etc.)?",
-              ["a) Rarely or never. I’m Team Natural all the way.",
+              ["d) I used to go hard with the chemicals, but I’ve stopped because of the damage.",
+                "a) Rarely or never. I’m Team Natural all the way.",
                "b) Only when I need to, for a special look.",
-               "c) Every few weeks. I love a fresh look.",
-               "d) I used to go hard with the chemicals, but I’ve stopped because of the damage."])
+               "c) Every few weeks. I love a fresh look."
+               ])
 total_score += score_map[q3[0]]
 
 # --- Section 2 ---
@@ -106,6 +107,7 @@ if st.button("Submit Survey"):
         st.write("REGROW STREAM")
         st.write("Your responses reflect advanced thinning, patchy loss, or extensive hair loss, often associated with medical conditions, long-term stress, or clinical treatments.")
         st.error("Regrow Stream: Advanced Hair Loss & Regrowth Programme \n \nSignificant hair loss is a deeply personal trauma, and we want you to know you don’t have to face it alone. Our Regrow Stream is our most intensive, doctor-led programme, created specifically for this stage of your journey. We are here to help you recover and reclaim your crown through a specialized medical plan focused on true regrowth.")
+
 
 
 
