@@ -84,7 +84,7 @@ total_score += score_map[q9[0]]
 
 # --- Results ---
 if st.button("Submit Survey"):
-    st.subheader("Your Total Hair Health Score")
+    st.subheader("You are the ideal candidate for our: ")
     st.write(f"**{total_score} points**")
 
     # Stream allocation based on score
@@ -96,4 +96,5 @@ if st.button("Submit Survey"):
         st.warning("Revitalise Stream: Thinning Intervention & Follicle Reactivation Programme \n \nNoticing that your hair is thinning can be a heavy experience, but you are making an amazing move by seeking a medical opinion now. Our Revitalise Stream is designed to address this hair trauma at the root. We use a multi-phase approach to stop active thinning in its tracks and help your hair work for you again, not against you.")
     elif 33 <= total_score <= 40:
         st.error("Regrow Stream: Advanced Hair Loss & Regrowth Programme \n \nSignificant hair loss is a deeply personal trauma, and we want you to know you don’t have to face it alone. Our Regrow Stream is our most intensive, doctor-led programme, created specifically for this stage of your journey. We are here to help you recover and reclaim your crown through a specialized medical plan focused on true regrowth.")
+
 
