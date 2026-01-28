@@ -90,6 +90,7 @@ if st.button("Submit Survey"):
 
     # Stream allocation based on score
     if 10 <= total_score <= 16:
+        st.write("Your responses indicate a strong baseline of hair and scalp health with minimal signs of damage or loss. The focus at this stage is preservation, protection, and long-term optimisation")
         st.success("Replenish Stream: Preventive Maintenance Programme \n \nIt’s wonderful to see that your crown is standing strong with a healthy foundation. Because you aren’t currently facing hair trauma, our Replenish Stream is all about protecting your peace. It’s a medically backed, preventative journey designed to keep your hair serving you beautifully for years to come.")
     elif 17 <= total_score <= 24:
         st.info("Restoration Stream: Damage Repair & Strengthening Programme \n \nIt sounds like your hair has been through a lot, and we recognize that accumulated damage is a trauma of its own. Our Restoration Stream is here to help you confront that damage and hit the reset button. We’ll work with you to repair and strengthen your strands, turning your hair journey back into a story of health")
@@ -97,6 +98,7 @@ if st.button("Submit Survey"):
         st.warning("Revitalise Stream: Thinning Intervention & Follicle Reactivation Programme \n \nNoticing that your hair is thinning can be a heavy experience, but you are making an amazing move by seeking a medical opinion now. Our Revitalise Stream is designed to address this hair trauma at the root. We use a multi-phase approach to stop active thinning in its tracks and help your hair work for you again, not against you.")
     elif 33 <= total_score <= 40:
         st.error("Regrow Stream: Advanced Hair Loss & Regrowth Programme \n \nSignificant hair loss is a deeply personal trauma, and we want you to know you don’t have to face it alone. Our Regrow Stream is our most intensive, doctor-led programme, created specifically for this stage of your journey. We are here to help you recover and reclaim your crown through a specialized medical plan focused on true regrowth.")
+
 
 
 
