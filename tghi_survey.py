@@ -12,10 +12,12 @@ total_score = 0
 st.header("1. Relationship with Your Hair")
 
 q1 = st.radio("How is your hair’s volume looking compared to 2-3 years ago?",
-              ["a) Still thick and thriving.",
+              [
                "b) A little thinner. I can see more of my scalp than I used to.",
-               "c) Noticeably thinner. My puff is smaller or my part is looking noticeably wider.",
-               "d) I see significant changes or visible patches of hair loss."])
+               "a) Still thick and thriving.",
+                "d) I see significant changes or visible patches of hair loss.",
+               "c) Noticeably thinner. My puff is smaller or my part is looking noticeably wider."
+               ])
 total_score += score_map[q1[0]]
 
 q2 = st.radio("Are wigs, weaves, or braids your 'crutch' right now to hide damage or thinning?",
@@ -104,6 +106,7 @@ if st.button("Submit Survey"):
         st.write("REGROW STREAM")
         st.write("Your responses reflect advanced thinning, patchy loss, or extensive hair loss, often associated with medical conditions, long-term stress, or clinical treatments.")
         st.error("Regrow Stream: Advanced Hair Loss & Regrowth Programme \n \nSignificant hair loss is a deeply personal trauma, and we want you to know you don’t have to face it alone. Our Regrow Stream is our most intensive, doctor-led programme, created specifically for this stage of your journey. We are here to help you recover and reclaim your crown through a specialized medical plan focused on true regrowth.")
+
 
 
 
