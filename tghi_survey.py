@@ -86,21 +86,25 @@ total_score += score_map[q9[0]]
 # --- Results ---
 if st.button("Submit Survey"):
     st.subheader("You are the ideal candidate for our: ")
-    st.write(f"**{total_score} points**")
 
     # Stream allocation based on score
     if 10 <= total_score <= 16:
+        st.write("REPLENISH STREAM")
         st.write("Your responses indicate a strong baseline of hair and scalp health with minimal signs of damage or loss. The focus at this stage is preservation, protection, and long-term optimisation")
         st.success("Replenish Stream: Preventive Maintenance Programme \n \nIt’s wonderful to see that your crown is standing strong with a healthy foundation. Because you aren’t currently facing hair trauma, our Replenish Stream is all about protecting your peace. It’s a medically backed, preventative journey designed to keep your hair serving you beautifully for years to come.")
     elif 17 <= total_score <= 24:
+        st.write("RESTORATION STREAM")
         st.write("Your assessment suggests mild to moderate hair damage, commonly linked to chemical processing, heat styling, or inconsistent care routines.")
         st.info("Restoration Stream: Damage Repair & Strengthening Programme \n \nIt sounds like your hair has been through a lot, and we recognize that accumulated damage is a trauma of its own. Our Restoration Stream is here to help you confront that damage and hit the reset button. We’ll work with you to repair and strengthen your strands, turning your hair journey back into a story of health")
     elif 25 <= total_score <= 32:
+        st.write("REVITALISE STREAM")
         st.write("Your responses point to active thinning or early-stage hair loss, often accompanied by lifestyle stressors, hormonal changes, or nutritional imbalances.")
         st.warning("Revitalise Stream: Thinning Intervention & Follicle Reactivation Programme \n \nNoticing that your hair is thinning can be a heavy experience, but you are making an amazing move by seeking a medical opinion now. Our Revitalise Stream is designed to address this hair trauma at the root. We use a multi-phase approach to stop active thinning in its tracks and help your hair work for you again, not against you.")
     elif 33 <= total_score <= 40:
+        st.write("REGROW STREAM")
         st.write("Your responses reflect advanced thinning, patchy loss, or extensive hair loss, often associated with medical conditions, long-term stress, or clinical treatments.")
         st.error("Regrow Stream: Advanced Hair Loss & Regrowth Programme \n \nSignificant hair loss is a deeply personal trauma, and we want you to know you don’t have to face it alone. Our Regrow Stream is our most intensive, doctor-led programme, created specifically for this stage of your journey. We are here to help you recover and reclaim your crown through a specialized medical plan focused on true regrowth.")
+
 
 
 
