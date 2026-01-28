@@ -2,6 +2,7 @@ import streamlit as st
 
 st.title("TGHI Hair Health Questionnaire")
 
+st.markdown(""" You’ll be amazed what little thought people give to the treatment of hair trauma. That is why we think it’s amazing that you’re making a move to get the medical opinion necessary to help you confront the hair trauma you have encountered. We’re here to help you make the best of your journey towards what good hair is to you. Hair that serves you and does not work against you. This quick 2-minute check-in helps our medical team understand your journey so we can match you with the right therapy. **Note:** This is not a medical diagnosis, but it is the first step toward your expert consultation and a personalised plan. """)
 # Mapping for scores
 score_map = {"a": 1, "b": 2, "c": 3, "d": 4}
 
@@ -96,5 +97,6 @@ if st.button("Submit Survey"):
         st.warning("Revitalise Stream: Thinning Intervention & Follicle Reactivation Programme \n \nNoticing that your hair is thinning can be a heavy experience, but you are making an amazing move by seeking a medical opinion now. Our Revitalise Stream is designed to address this hair trauma at the root. We use a multi-phase approach to stop active thinning in its tracks and help your hair work for you again, not against you.")
     elif 33 <= total_score <= 40:
         st.error("Regrow Stream: Advanced Hair Loss & Regrowth Programme \n \nSignificant hair loss is a deeply personal trauma, and we want you to know you don’t have to face it alone. Our Regrow Stream is our most intensive, doctor-led programme, created specifically for this stage of your journey. We are here to help you recover and reclaim your crown through a specialized medical plan focused on true regrowth.")
+
 
 
