@@ -16,7 +16,10 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds)
 
 # Replace with the name of your Google Sheet
-sheet = client.open("TGHI Survey Results").sheet1
+try:
+         sheet = client.open("TGHI Survey Results").sheet1
+         st.success("Connected to Google Sheets successfully!")
+except Exception as e: st.error(f"Connection failed: {e}")
 
 # ---------------- Survey Intro ----------------
 st.title("TGHI Hair Health Questionnaire")
@@ -171,6 +174,7 @@ if st.button("Submit Survey"):
     sheet.append_row(list(new_data.values()))
 
     st.info("✅ Your response has been recorded in Google Sheets.")
+
 
 
 
