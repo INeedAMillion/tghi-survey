@@ -2,13 +2,14 @@ import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
+import json
 
 # ---------------- Google Sheets Setup ----------------
 scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive"]
 
 # Replace with the filename of your downloaded JSON key
-import json
+
 creds_dict = json.loads(st.secrets["gcp_service_account"])
 creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 
@@ -170,5 +171,6 @@ if st.button("Submit Survey"):
     sheet.append_row(list(new_data.values()))
 
     st.info("✅ Your response has been recorded in Google Sheets.")
+
 
 
