@@ -9,8 +9,8 @@ scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive"]
 
 # Replace with the filename of your downloaded JSON key
-
-creds_dict = json.loads(st.secrets["gcp_service_account"])
+raw_json = st.secrets["gcp_service_account"].strip()
+creds_dict = json.loads(raw_json)
 creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 
 client = gspread.authorize(creds)
@@ -171,6 +171,7 @@ if st.button("Submit Survey"):
     sheet.append_row(list(new_data.values()))
 
     st.info("✅ Your response has been recorded in Google Sheets.")
+
 
 
 
