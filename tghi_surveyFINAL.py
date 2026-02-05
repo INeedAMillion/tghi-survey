@@ -8,7 +8,10 @@ scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive"]
 
 # Replace with the filename of your downloaded JSON key
-creds = ServiceAccountCredentials.from_json_keyfile_name("tghi-survey-service-account.json", scope)
+import json
+creds_dict = json.loads(st.secrets["gcp_service_account"])
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+
 client = gspread.authorize(creds)
 
 # Replace with the name of your Google Sheet
@@ -167,4 +170,5 @@ if st.button("Submit Survey"):
     sheet.append_row(list(new_data.values()))
 
     st.info("✅ Your response has been recorded in Google Sheets.")
+
 
