@@ -167,3 +167,4 @@ if st.button("Submit Survey"):
     sheet.append_row(list(new_data.values()))
 
     st.info("✅ Your response has been recorded in Google Sheets.")
+
