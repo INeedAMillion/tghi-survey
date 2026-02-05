@@ -146,10 +146,11 @@ if st.button("Submit Survey"):
     df = pd.DataFrame([new_data])
 
     if os.path.exists("survey_results.csv"):
-        df.to_csv("Desktop/survey_results.csv", mode="a", header=False, index=False)
+        df.to_csv("survey_results.csv", mode="a", header=False, index=False)
     else:
         df.to_csv("survey_results.csv", index=False)
 
     st.info("Your response has been recorded.")
+
 
 
