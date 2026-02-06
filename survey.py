@@ -193,4 +193,5 @@ if st.button("Submit Survey"):
         stream
     ])
 
-    st.info("✅ Your response has been recorded in Google Sheets.")
+    st.info("✅ Your response has been recorded.")
+
